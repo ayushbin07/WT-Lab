@@ -1,5 +1,6 @@
 body {
     background-color: wheat;
+    margin: 20px 20%;
 }
 
 #idCard {
@@ -14,7 +15,8 @@ body {
     box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.616);
     transition: all 0.3s ease;
 }
-#idCard:hover{
+
+#idCard:hover {
     transform: scale(1.1);
     box-shadow: 10px 10px 20px 1px rgba(0, 0, 0, 0.616);
 }
