@@ -5,6 +5,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechGadgets - E-commerce Store</title>
+
+    <link rel="stylesheet" href="style_ex2.css">
+
+
+    <style>
+        mark {
+            background-color: #ffeaa7;
+            padding: 5px;
+            border-radius: 3px;
+        }
+
+        .price-tag {
+            font-size: 1.2em;
+            color: #d35400;
+        }
+    </style>
 </head>
 
 <body>
@@ -23,6 +39,13 @@
                 <li><a href="index1.html">Back to Exercise 1</a></li>
             </ul>
         </nav>
+
+
+        <form action="#" method="get">
+            <label for="search">Search Products:</label>
+            <input type="search" id="search" name="q" placeholder="Type to search...">
+            <input type="submit" value="Search">
+        </form>
     </header>
 
     <hr>
@@ -70,7 +93,7 @@
                         alt="Wireless Earbuds" width="200" height="200">
                     <figcaption>Immersive sound experience.</figcaption>
                 </figure>
-                <p>Price: <strong class="price-tag">$199 (Sale!)</strong></p>
+                <p>Price: <strong class="price-tag" style="color: #e74c3c;">$199 (Sale!)</strong></p>
                 <p>Features: Active Noise Cancellation, 24h Battery Life, Water Resistant.</p>
                 <button type="button">Add to Cart</button>
             </article>
