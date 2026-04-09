@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5e6e8;
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+h1 {
+    color: #d84860;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+fieldset {
+    background: white;
+    border: 2px solid #f0c6d0;
+    border-radius: 16px;
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    box-shadow: 0 4px 12px rgba(216, 72, 96, 0.15);
+}
+
+#dataFieldset {
+    max-width: 960px;
+}
+
+legend {
+    background-color: #d84860;
+    color: white;
+    padding: 6px 18px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#formContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+label {
+    font-weight: 600;
+    color: #b03050;
+}
+
+.radio-group,
+.checkbox-group {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 14px;
+    padding: 6px 0;
+}
+
+.radio-group label,
+.checkbox-group label {
+    font-weight: normal;
+    color: #333;
+    margin: 0;
+    cursor: pointer;
+}
+
+.error-msg {
+    color: #d84860;
+    font-size: 13px;
+    font-weight: 600;
+    min-height: 16px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 2px solid #f0c6d0;
+    border-radius: 10px;
+    margin-top: 4px;
+    transition: border-color 0.2s;
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="date"]:focus,
+textarea:focus {
+    outline: none;
+    border-color: #d84860;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    accent-color: #d84860;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+#submitBtn {
+    display: block;
+    width: 100%;
+    margin-top: 16px;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: inherit;
+    background-color: #d84860;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.15s, box-shadow 0.2s;
+    letter-spacing: 0.5px;
+}
+
+#submitBtn:hover {
+    background-color: #b03050;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(216, 72, 96, 0.35);
+}
+
+/* Data section */
+#dataFieldset h2 {
+    text-align: center;
+    color: #d84860;
+    font-size: 1.3rem;
+    margin-bottom: 14px;
+}
+
+.table-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    margin-bottom: 12px;
+}
+
+.action-btn {
+    padding: 8px 18px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: inherit;
+    background-color: white;
+    color: #d84860;
+    border: 2px solid #d84860;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, transform 0.15s;
+}
+
+.action-btn:hover {
+    background-color: #d84860;
+    color: white;
+    transform: translateY(-1px);
+}
+
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 10px;
+    border: 1px solid #f0c6d0;
+}
+
+#dataTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+#dataTable thead {
+    background-color: #d84860;
+    color: white;
+}
+
+#dataTable th {
+    padding: 11px 14px;
+    text-align: left;
+    white-space: nowrap;
+    font-weight: 600;
+    letter-spacing: 0.4px;
+}
+
+#dataTable td {
+    padding: 10px 14px;
+    border-bottom: 1px solid #f0c6d0;
+    color: #444;
+    vertical-align: top;
+    word-break: break-word;
+    max-width: 200px;
+}
+
+#dataTable tbody tr:nth-child(even) {
+    background-color: #fdf0f2;
+}
+
+#dataTable tbody tr:hover {
+    background-color: #fce4ea;
+}
+
+#dataTable td:first-child {
+    text-align: center;
+    font-weight: 700;
+    color: #d84860;
+    white-space: nowrap;
+}
+
+.empty-msg {
+    text-align: center;
+    color: #aaa;
+    font-style: italic;
+    padding: 24px !important;
+}

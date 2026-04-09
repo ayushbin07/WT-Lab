@@ -1,0 +1,119 @@
+<!-- Create a form with all fields, including checkboxes, radio buttons and input fields etc. And print that using JavaScript in a div. -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <fieldset>
+        <h1>Student's Form</h1>
+        <legend style="font-size: 16px; text-align: center; font-weight: bold;">Data Form</legend>
+        <div id="formContainer">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" placeholder="Ace" id="name" name="name">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" placeholder="example@gmail.com" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword">
+                <span id="passwordError" class="error-msg"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="usn">USN:</label>
+                <input type="text" placeholder="24BTRXXXXX" id="usn" name="usn">
+            </div>
+
+            <div class="form-group">
+                <label>Gender:</label>
+                <div class="radio-group">
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label>Languages:</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="html" name="languages" value="HTML">
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="css" name="languages" value="CSS">
+                    <label for="css">CSS</label>
+                    <input type="checkbox" id="javascript" name="languages" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                    <input type="checkbox" id="java" name="languages" value="Java">
+                    <label for="java">Java</label>
+                    <input type="checkbox" id="python" name="languages" value="Python">
+                    <label for="python">Python</label>
+                    <input type="checkbox" id="rust" name="languages" value="Rust">
+                    <label for="rust">Rust</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob">
+            </div>
+
+            <div class="form-group">
+                <label for="description">Description:</label>
+                <textarea id="description" placeholder="Tell us about yourself ...." name="description"
+                    rows="4"></textarea>
+            </div>
+        </div>
+        <button id="submitBtn">Submit</button>
+    </fieldset>
+
+    <fieldset id="dataFieldset">
+        <legend style="font-size: 16px; text-align: center; font-weight: bold;">Submitted Data</legend>
+        <h2>Student's Data</h2>
+        <div class="table-actions">
+            <button class="action-btn" onclick="copyTable()">&#128203; Copy Table</button>
+            <button class="action-btn" onclick="exportCSV()">&#8615; Export CSV</button>
+        </div>
+        <div class="table-wrapper">
+            <table id="dataTable">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>USN</th>
+                        <th>Gender</th>
+                        <th>Languages</th>
+                        <th>Date of Birth</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody">
+                    <tr id="emptyRow">
+                        <td colspan="8" class="empty-msg">No submissions yet.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </fieldset>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
